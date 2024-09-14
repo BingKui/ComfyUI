@@ -26,7 +26,7 @@ defaults = {
     "trailing_comma": False,
     "exclude_tags": "",
     "ortProviders": ["CUDAExecutionProvider", "CPUExecutionProvider"],
-    "HF_ENDPOINT": "https://huggingface.co"
+    "HF_ENDPOINT": "https://hf-mirror.com"
 }
 defaults.update(config.get("settings", {}))
 
