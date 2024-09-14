@@ -34638,7 +34638,7 @@ const useSettingStore = defineStore("setting", {
         id: "Comfy.Workflow.ModelDownload.AllowedSources",
         name: "Allowed model download sources",
         type: "hidden",
-        defaultValue: ["https://huggingface.co/", "https://civitai.com/"]
+        defaultValue: ["https://hf-mirror.com/", "https://civitai.com/"]
       });
       app$1.ui.settings.addSetting({
         id: "Comfy.Workflow.ModelDownload.AllowedSuffixes",
