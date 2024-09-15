@@ -35,6 +35,8 @@ sh udotai_init_pip3.sh
 
 window使用脚本`udotai_start.bat`，双击运行即可开启服务。
 
+> 如果未安装显卡驱动，无法使用CUDA，可以使用 `udotai_start_cpu.bat` 使用CPU启动。
+
 Mac使用脚本`udotai_start.sh`，在终端运行即可开启服务。
 
 ![alt text](image.png)
@@ -51,7 +53,7 @@ Vae模型需要放在`modules/vae`目录下。
 
 ### 模型下载地址
 
-可更具自行需要下载使用的模型和Lora，一下只做推荐，可自行寻找免费模型使用。
+可根据自行需要下载使用的模型和Lora，以下只做推荐，可自行寻找免费模型替换使用。
 
 ### 生图模型
 
