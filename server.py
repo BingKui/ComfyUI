@@ -74,7 +74,8 @@ def create_cors_middleware(allowed_origin: str):
         else:
             response = await handler(request)
 
-        response.headers['Access-Control-Allow-Origin'] = allowed_origin
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        # response.headers['Access-Control-Allow-Origin'] = allowed_origin
         response.headers['Access-Control-Allow-Methods'] = 'POST, GET, DELETE, PUT, OPTIONS'
         response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
         response.headers['Access-Control-Allow-Credentials'] = 'true'
@@ -161,10 +162,11 @@ class PromptServer():
         self.number = 0
 
         middlewares = [cache_control]
-        if args.enable_cors_header:
-            middlewares.append(create_cors_middleware(args.enable_cors_header))
-        else:
-            middlewares.append(create_origin_only_middleware())
+        middlewares.append(create_cors_middleware(args.enable_cors_header))
+        # if args.enable_cors_header:
+        #     middlewares.append(create_cors_middleware(args.enable_cors_header))
+        # else:
+        #     middlewares.append(create_origin_only_middleware())
 
         max_upload_size = round(args.max_upload_size * 1024 * 1024)
         self.app = web.Application(client_max_size=max_upload_size, middlewares=middlewares)
