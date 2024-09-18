@@ -45,7 +45,7 @@ Mac使用脚本`udotai_start.sh`，在终端运行即可开启服务。
 
 生图模型需要自行下载，并放在`modules/checkpoints`目录下。
 
-Lora模型需要放在`modules/lora`目录下。
+Lora模型需要放在`modules/loras`目录下。
 
 Vae模型需要放在`modules/vae`目录下。
 
